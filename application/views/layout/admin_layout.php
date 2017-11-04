@@ -137,31 +137,33 @@
                         </li>
                         <li><a class="ajax-link" href="<?php echo base_url();?>admin/manage_about"><i class="glyphicon glyphicon-bold"></i><span> About Us</span></a>
                         </li>
-                        <li><a class="ajax-link" href="<?php echo base_url();?>admin/bestselling"><i
-                                    class="glyphicon glyphicon-align-justify"></i><span> Best Selling Books</span></a></li>
-                        <li><a class="ajax-link" href="<?php echo base_url();?>admin/stopeers"><i
+                        <!-- <li><a class="ajax-link" href="<?php //echo base_url();?>admin/bestselling"><i
+                                    class="glyphicon glyphicon-align-justify"></i><span> Best Selling Books</span></a></li> -->
+                        <!-- <li><a class="ajax-link" href="<?php //echo base_url();?>admin/stopeers"><i
                                     class="glyphicon glyphicon-asterisk"></i><span> Stoppers</span></a></li>
-                        <li class="nav-header hidden-md">Orders Section</li>
+                        <li class="nav-header hidden-md">Orders Section</li> -->
 
-                        <li class="accordion">
+                       <!--  <li class="accordion">
                             <a href="#"><i class="glyphicon glyphicon-plus"></i><span> Orders</span></a>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="<?php echo base_url(); ?>admin/order/Pending">Pending Orders</a></li>
-                                <li><a href="<?php echo base_url(); ?>admin/order/Confirmed">Confirm Orders</a></li>
-                                <li><a href="<?php echo base_url(); ?>admin/order/Readytoship">ReadyToShipped Orders</a></li>
-                                <li><a href="<?php echo base_url(); ?>admin/order/Shipped">Shipped Orders</a></li>
-                                <li><a href="<?php echo base_url(); ?>admin/order/Delivered">Delivered Orders</a></li>
-                                <li><a href="<?php echo base_url(); ?>admin/order/Canceled">Cancelled Orders</a></li>
-                                <li><a href="<?php echo base_url(); ?>admin/allorders">ViewAll Orders</a></li>
+                                <li><a href="<?php //echo base_url(); ?>admin/order/Pending">Pending Orders</a></li>
+                                <li><a href="<?php //echo base_url(); ?>admin/order/Confirmed">Confirm Orders</a></li>
+                                <li><a href="<?php //echo base_url(); ?>admin/order/Readytoship">ReadyToShipped Orders</a></li>
+                                <li><a href="<?php //echo base_url(); ?>admin/order/Shipped">Shipped Orders</a></li>
+                                <li><a href="<?php //echo base_url(); ?>admin/order/Delivered">Delivered Orders</a></li>
+                                <li><a href="<?php //echo base_url(); ?>admin/order/Canceled">Cancelled Orders</a></li>
+                                <li><a href="<?php //echo base_url(); ?>admin/allorders">ViewAll Orders</a></li>
                             </ul>
+                        </li> -->
+                        <!-- <li><a class="ajax-link" href="<?php //echo base_url(); ?>admin/scroller"><i class="glyphicon glyphicon-barcode"></i><span> scroller</span></a></li> -->
+
+                       <!--  <li><a class="ajax-link" href="<?php //echo base_url(); ?>admin/managecoupon"><i class="glyphicon glyphicon-barcode"></i><span> Coupon</span></a></li>
+                        <li><a class="ajax-link" href="<?php //echo base_url(); ?>admin/authorcorner"><i class="glyphicon glyphicon-user"></i><span> Author's Corner</span></a>
                         </li>
-                        <li><a class="ajax-link" href="<?php echo base_url(); ?>admin/managecoupon"><i class="glyphicon glyphicon-barcode"></i><span> Coupon</span></a>
-                        <li><a class="ajax-link" href="<?php echo base_url(); ?>admin/authorcorner"><i class="glyphicon glyphicon-user"></i><span> Author's Corner</span></a>
+                        <li><a class="ajax-link" href="<?php// echo base_url(); ?>admin/testimonial"><i class="glyphicon glyphicon-fire"></i><span> Testimonial</span></a>
                         </li>
-                        <li><a class="ajax-link" href="<?php echo base_url(); ?>admin/testimonial"><i class="glyphicon glyphicon-fire"></i><span> Testimonial</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="<?php echo base_url(); ?>admin/report"><i class="glyphicon glyphicon-file"></i><span> Report</span></a>
-                        </li>
+                        <li><a class="ajax-link" href="<?php// echo base_url(); ?>admin/report"><i class="glyphicon glyphicon-file"></i><span> Report</span></a>
+                        </li> -->
                     </ul>
                     <label id="for-is-ajax" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>
                 </div>

@@ -153,7 +153,8 @@ class admin extends CI_Controller {
 			//input value
 			$txtAboutContent=$this->input->post('txtAboutContent');
 			$txtYoutubeURL=$this->input->post('txtYoutubeURL');
-			$this->admin_model->change_about($txtAboutContent,$txtYoutubeURL);
+			$txtScroller=$this->input->post('txtScroller');
+			$this->admin_model->change_about($txtAboutContent,$txtYoutubeURL,$txtScroller);
 			$this->session->set_flashdata('success_log', 'About Updated');
 			$url='admin/manage_about';
 			redirect($url,'refresh');
@@ -166,6 +167,13 @@ class admin extends CI_Controller {
 		);
 		$this->load->view('layout/admin_layout',$data);
 	}
+
+
+	// // This Section For Scroller
+	// public function scroller()
+	// {
+	// 	# code...
+	// }
 
 
 }

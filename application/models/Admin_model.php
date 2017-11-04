@@ -46,13 +46,14 @@ class admin_model extends CI_Model {
 
 	// Update About US
 
-	public function change_about($about_us,$youtube_url)
+	public function change_about($about_us,$youtube_url,$txtScroller)
 	{
 		$this->db->where('id', 1);
 		$object=array(
 			'youtube_url' => $youtube_url,
 			'about_content' => $about_us,
-			'update_at' =>date('Y-m-d h:i:sa')
+			'scroll_text' => $txtScroller,
+			'update_at' => date('Y-m-d h:i:sa')
 		);
 		$this->db->update('tbl_about', $object);
 	}

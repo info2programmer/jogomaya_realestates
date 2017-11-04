@@ -65,6 +65,12 @@ $buttonAttribute=array(
 								</div> -->
 
 								<div class="form-group col-md-12 text-center">
+									<label for="txtScroller">Scroller Text</label>
+									<input type="text" name="txtScroller" id="txtScroller" class="form-control" placeholder="Enter Scroller Text" required value="<?php echo $about_data[0]['scroll_text']; ?>">
+									
+								</div>
+
+								<div class="form-group col-md-12 text-center">
 									<label for="txtYoutubeURL">Youtube URL</label>
 									<input type="text" name="txtYoutubeURL" id="txtYoutubeURL" class="form-control" placeholder="Enter Youtube URL" required value="<?php echo $about_data[0]['youtube_url']; ?>">
 									
