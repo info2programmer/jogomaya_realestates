@@ -76,7 +76,7 @@ class admin extends CI_Controller {
 	public function welcome(){
 		if($this->session->userdata('adminlogin')){
 			$data=array(
-				'main_view' => 'admin/dashboard_view'
+				'main_view' => 'Admin/dashboard_view'
 			);
 			$this->load->view('layout/admin_layout',$data);
 		}
@@ -151,28 +151,18 @@ class admin extends CI_Controller {
 		if($this->input->post('btnSubmit') == 'Update Background'){
 
 			//input value
-			$uploadPath = './assets/media-demo/banner/';
-			$config['upload_path'] = $uploadPath;
-			$config['allowed_types'] = 'gif|jpg|png';
-			$this->load->library('upload', $config);
-			$this->upload->initialize($config);
-			if($this->upload->do_upload('fileImage')){
-				$fileData = $this->upload->data();
-				$this->admin_model->insertbanner($fileData['file_name']);
-				$this->session->set_flashdata('success_log', 'Banner upload successfully');
-				$url='admin/manage_banner';
-				redirect($url,'refresh');
-			}
-			else{
-				$this->session->set_flashdata('error_log', $this->upload->display_errors());
-				$url='admin/manage_banner';
-				redirect($url,'refresh');
-			}
+			$txtAboutContent=$this->input->post('txtAboutContent');
+			$txtYoutubeURL=$this->input->post('txtYoutubeURL');
+			$this->admin_model->change_about($txtAboutContent,$txtYoutubeURL);
+			$this->session->set_flashdata('success_log', 'About Updated');
+			$url='admin/manage_about';
+			redirect($url,'refresh');
 
 		}
 
 		$data=array(
-			'main_view' => 'admin/about_us_view'
+			'main_view' => 'admin/about_us_view',
+			'about_data' => $this->admin_model->get_about()
 		);
 		$this->load->view('layout/admin_layout',$data);
 	}

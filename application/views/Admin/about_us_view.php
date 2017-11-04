@@ -37,7 +37,6 @@ $buttonAttribute=array(
 			<div class="box-content">
 				<ul class="nav nav-tabs" id="myTab">
 					<li class="active"><a href="#info">Update About</a></li>
-					<li><a href="#custom">List</a></li>
 				</ul>
 
 				<div id="myTabContent" class="tab-content">
@@ -58,16 +57,22 @@ $buttonAttribute=array(
 						<?php echo form_open_multipart('admin/manage_about'); ?>
 						
 							
-								<div class="form-group col-md-12 text-center">
-									<?php echo form_label('Select Image', 'fileImage'); ?>
+								<!-- <div class="form-group col-md-12 text-center">
+									<?php //echo form_label('Select Image', 'fileImage'); ?>
 									<?php 
-										echo form_upload($fileImage);;
+										//echo form_upload($fileImage);;
 									 ?>
+								</div> -->
+
+								<div class="form-group col-md-12 text-center">
+									<label for="txtYoutubeURL">Youtube URL</label>
+									<input type="text" name="txtYoutubeURL" id="txtYoutubeURL" class="form-control" placeholder="Enter Youtube URL" required value="<?php echo $about_data[0]['youtube_url']; ?>">
+									
 								</div>
 
 								<div class="form-group col-md-12 text-center">
 									<label for="txtAboutContent">Enter Content</label>
-									<textarea name="txtAboutContent" class="col-sm-12" id="txtAboutContent" rows="10"></textarea>
+									<textarea name="txtAboutContent" class="col-sm-12" id="txtAboutContent" rows="10"><?php echo $about_data[0]['about_content']; ?></textarea>
 									
 								</div>
 
@@ -83,7 +88,7 @@ $buttonAttribute=array(
 								<br><br/> <br>
 
 							</div>
-							<div class="tab-pane" id="custom">
+							<!-- <div class="tab-pane" id="custom">
 								<h3>List
 									<small>Get All Banner</small>
 								</h3>
@@ -107,7 +112,7 @@ $buttonAttribute=array(
 								<?php endforeach; ?>
 								</tbody>
 								</table>
-							</div>
+							</div> -->
 							
 						</div>
 					</div>
